@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check dashboard URL
         run: |
-          URL="https://kunalkaushal-stack.github.io/ather-ldr-dashboard/ATHER_LDR/ATHER_LDR_Dashboard_v1.0.html"
+          URL="https://ather-ldr-dashboard.vercel.app/"
           STATUS=$(curl -o /dev/null -s -w "%{http_code}" "$URL")
           echo "HTTP status: $STATUS for $URL"
           if [ "$STATUS" != "200" ]; then
